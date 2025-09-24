@@ -31,9 +31,9 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
 
 .swipeAnimate {display: none; position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); z-index: 30; color: #fff;}
 .swipeAnimate > div {position: relative;}
-.swipeAnimate .arrowLeft {display: inline-block; width: 14px; height: 9px;  background: url('/images/arrowLeft.png')  no-repeat; background-size: contain; position: absolute; top: 0; left: -20px; animation: arrow-left 1.5s infinite;}
-.swipeAnimate .arrowRight {display: inline-block; width: 14px; height: 9px; background: url('/images/arrowRight.png')  no-repeat; background-size: contain; position: absolute; top: 0; right: -20px; animation: arrow-right 1.5s infinite;}
-.swipeAnimate .finger {display: inline-block; width: 30px; height: 47px; background: url('/images/finger.png') center no-repeat; background-size: cover;  animation: finger-opacity 1.5s infinite;}
+.swipeAnimate .arrowLeft {display: inline-block; width: 14px; height: 9px;  background: url('../images/arrowLeft.png')  no-repeat; background-size: contain; position: absolute; top: 0; left: -20px; animation: arrow-left 1.5s infinite;}
+.swipeAnimate .arrowRight {display: inline-block; width: 14px; height: 9px; background: url('../images/arrowRight.png')  no-repeat; background-size: contain; position: absolute; top: 0; right: -20px; animation: arrow-right 1.5s infinite;}
+.swipeAnimate .finger {display: inline-block; width: 30px; height: 47px; background: url('../images/finger.png') center no-repeat; background-size: cover;  animation: finger-opacity 1.5s infinite;}
 @keyframes arrow-left  { 0%,100%{transform:translateX(0);opacity:.3} 50%{transform:translateX(-8px);opacity:1} }
 @keyframes arrow-right { 0%,100%{transform:translateX(0);opacity:.3} 50%{transform:translateX( 8px);opacity:1} }
 @keyframes finger-opacity{  0%,100%{opacity:.3} 50%{opacity:1} }
@@ -45,10 +45,10 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
 .main_panel .textBox .moreBtn {margin-block: 70px;}
 .moreBtn .btnMoreW {display: inline-block; height: 35px; position: relative; padding-right: 45px;}
 .moreBtn .btnMoreW span {color: #fff; font-size: 18px; line-height: 35px; letter-spacing: 0; display: inline-block;}
-.moreBtn .btnMoreW span::after {content: ''; background: url('/images/ic_arrow_w.png') center no-repeat; background-size: cover; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
+.moreBtn .btnMoreW span::after {content: ''; background: url('../images/ic_arrow_w.png') center no-repeat; background-size: cover; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
 .moreBtn .btnMoreB {display: inline-block; height: 35px; position: relative; padding-right: 45px;}
 .moreBtn .btnMoreB span {color: #000; font-size: 18px; line-height: 35px; letter-spacing: 0; display: inline-block; font-weight: 500;}
-.moreBtn .btnMoreB span::after {content: ''; background: url('/images/ic_arrow_b.png') center no-repeat; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
+.moreBtn .btnMoreB span::after {content: ''; background: url('../images/ic_arrow_b.png') center no-repeat; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
 .desc {line-height: 1.5em;}
 .about_panel .textBox,.skills_panel .textBox {color: #fff;}
 .main_panel.about_panel {background: #000 url('../images/aboutBg.jpg') right center no-repeat; background-size: 60% 50%;}
@@ -73,17 +73,17 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
 .main_panel.update_panel .noticeBox .cell .thumbBox {position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
 .main_panel.update_panel .noticeBox .cell .thumbBox img {width: 100%; min-height: 100%; transition: transform 0.3s ease;}
 .main_panel.update_panel .noticeBox .cell:hover .thumbBox img {transform: scale(1.2);}
-.main_panel.update_panel .noticeBox .cell .coverBox {background: url('/images/cellCover.png') center no-repeat; background-size: 100% 100%; position: absolute; left: 0; width: 100%; top: -1px; height: calc(100% + 1px);}
+.main_panel.update_panel .noticeBox .cell .coverBox {background: url('../images/cellCover.png') center no-repeat; background-size: 100% 100%; position: absolute; left: 0; width: 100%; top: -1px; height: calc(100% + 1px);}
 .main_panel.update_panel .noticeBox .cell .coverBox .subject {color: #fff; font-size: 14px; line-height: 1.4; position: absolute; top: 5%; left: 5%;}
 .main_panel.update_panel .noticeBox .cell .coverBox .subject span {color: #fff; font-size: 18px; line-height: 1.4;}
 .main_panel.update_panel .noticeBox .cell .coverBox .more {color: #fff; font-size: 14px; position: absolute; right: 5%; bottom: 5%;}
-.main_panel.update_panel .btnPrev {display: none; background:  url('/images/btn_before_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; left: 2%; z-index: 10;}
-.main_panel.update_panel .btnNext {display: none; background:  url('/images/btn_next_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; right: 2%; z-index: 10;}
+.main_panel.update_panel .btnPrev {display: none; background:  url('../images/btn_before_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; left: 2%; z-index: 10;}
+.main_panel.update_panel .btnNext {display: none; background:  url('../images/btn_next_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; right: 2%; z-index: 10;}
 .main_panel.update_panel .btnPrev,
 .main_panel.update_panel .btnNext {cursor: pointer; width: 50px; height: 50px; border-radius: 50px;}
 
 
-.main_panel.contact_panel {height: 100vh; background: url('/images/contactbg.jpg') center no-repeat; background-size: cover; color: #fff;}
+.main_panel.contact_panel {height: 100vh; background: url('../images/contactbg.jpg') center no-repeat; background-size: cover; color: #fff;}
 .main_panel.contact_panel .textBox {left: 0; width: 100%; text-align: center;}
 .main_panel.contact_panel a {text-decoration: none; color: #fff;}
 .main_panel.contact_panel .textBox .btnBox {text-align: center; margin-top: 30px;}
@@ -92,7 +92,7 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
 /* 서브페이지 */
 /* 서브페이지공통비주얼 */
 .subVisual {background: transparent; position: relative; z-index: 99; padding-block: 180px 130px;}
-.subVisual .bg {display: block; width: 533px; height: 351px; position: absolute; top: 0; left: 0; background: url('/images/subBg.png');}
+.subVisual .bg {display: block; width: 533px; height: 351px; position: absolute; top: 0; left: 0; background: url('../images/subBg.png');}
 .subVisual h2 {color: #111; font-size: 56px; font-weight: 800; letter-spacing: -3px; text-align: center;}
 .subVisual ul {text-align: center; margin-top: 40px; display: flex; justify-content: center; gap: 40px;}
 .subVisual ul li a {font-size: 20px; text-decoration: none; color: #505050;}
@@ -146,10 +146,10 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
 .subContent.work_panel .skillsBox > div .tit::after {content: ''; width: 21px; height: 2px; background-color: #000; position: absolute; left: 0; bottom: 0;}
 .subContent.work_panel .skillsBox > div .tit .titPoint {position: relative; color: #0162ff; font-weight: 700; font-size: 16px; margin-left: 5px;}
 .subContent.work_panel .skillsBox > div .txt {font-size: 16px; line-height: 1.3em; color: #666; padding-top: 10px;}
-.subContent.work_panel .skillsBox > div:nth-child(1) {background: #f5f5f5 url('/images/skillsBox01.jpg') right bottom no-repeat; background-size: cover;} 
-.subContent.work_panel .skillsBox > div:nth-child(2) {background: #f5f5f5 url('/images/skillsBox02.jpg') right bottom no-repeat; background-size: cover;} 
-.subContent.work_panel .skillsBox > div:nth-child(3) {background: #f5f5f5 url('/images/skillsBox03.jpg') right bottom no-repeat; background-size: cover;} 
-.subContent.work_panel .skillsBox > div:nth-child(4) {background: #f5f5f5 url('/images/skillsBox04.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(1) {background: #f5f5f5 url('../images/skillsBox01.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(2) {background: #f5f5f5 url('../images/skillsBox02.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(3) {background: #f5f5f5 url('../images/skillsBox03.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(4) {background: #f5f5f5 url('../images/skillsBox04.jpg') right bottom no-repeat; background-size: cover;} 
 
 .project_panel .pj_pu_01_box {background-color: #6e6e6e; color: #fff;}
 .project_panel .pj_pu_02_box {background-color: #c03b00; color: #fff;}
@@ -337,7 +337,7 @@ main section {width: 100vw; height: 100vh; position: relative; overflow: hidden;
     .cellBox {display: flex; justify-content: space-between; align-items: center; margin-bottom: 55px; flex-direction: column;}
     .cellBox .title {color: #333; font-size: 40px; letter-spacing: -2px; font-weight: 500; align-self: start; margin-bottom: 70px;}
     .cellBox .textBox {width: 100%; align-self: start;}
-    .subVisual .bg {display: block; width: 300px; height: 197px; position: absolute; top: 0; left: 0; background: url('/images/subBg.png') center no-repeat; background-size: cover;}
+    .subVisual .bg {display: block; width: 300px; height: 197px; position: absolute; top: 0; left: 0; background: url('../images/subBg.png') center no-repeat; background-size: cover;}
 
     .subContent.skills_panel {margin: 0 auto; height: auto; position: relative; display: flex; flex-direction: column;}
     .subContent.skills_panel .cellBox .textBox {width: 100%;}
