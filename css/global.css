@@ -1,0 +1,81 @@
+header,
+main,
+footer,
+.subContent.work_panel .skillsBox > div .tit .titPoint
+ {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.mainVisual .textBox .title p,
+.main_panel .textBox .title,
+.entitle,
+.tit{
+    font-family: 'Anton', 'Black Han Sans', sans-serif;
+}
+
+header{position: fixed; left: 0; top: 0; right: 0; z-index: 700;}
+header .headerWrap {position: relative;}
+header .headerWrap h1 {position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 150;}
+header .headerWrap h1 a {display: block; position: relative; width: 100%; height: 100%; text-decoration: none;}
+header .headerWrap h1 a span {display: block; position: absolute; top: 15px; left: 0; width: 150px; height: 40px; text-indent: -9999px; background: url("/images/Logo_wh.png") no-repeat center center; background-size: 100% auto;}
+header.sub.scroll {height: 80px; background-color: #fff; box-sizing: border-box; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);}
+header.sub.scroll .headerWrap h1 a span {display: block; position: absolute; top: 15px; left: 0; width: 150px; height: 40px; text-indent: -9999px; background: url("/images/Logo.png") no-repeat center center; background-size: 100% auto;}
+.btnHamburger {z-index: 710; display: block; width: 60px; height: 60px; border-radius: 60px; position: fixed; top: 20px; right: 20px; cursor: pointer; border: none; background: #0162ff;}
+.btnHamburger .bar {display:block; width:60%;height:3px;margin:0 auto 6px;background:#fff;border-radius:2px;transition:transform 0.3s ease, opacity 0.3s ease;transform-origin:left center}
+.btnHamburger .bar:last-child {margin-bottom:0}
+.btnHamburger.active {padding-left: 12px;}
+.btnHamburger.active .bar:nth-child(1) {transform:rotate(45deg)}
+.btnHamburger.active .bar:nth-child(2) {opacity:0}
+.btnHamburger.active .bar:nth-child(3) {transform:rotate(-45deg)}
+.sidePanel {z-index: 500; display: flex; flex-direction: column; justify-content: space-between; position: fixed; width: 400px; height: 100vh; overflow: hidden; top: 0; bottom: 0; background: #ffffff; left: auto; right: -400px; opacity: 0; transition:right 0.3s ease, opacity 0.3s ease;}
+.sidePanel.active {right: 0; opacity: 1;}
+.sidePanel .gnb li a span::after {z-index: 9999; content: ''; width: 10px; height: 10px; border-radius: 10px; background-color: #0162ff; position: absolute; top: -10px; right: -15px;}
+.sidePanel .gnb li:hover a span::after {display: inline-block;}
+.sidePanelList {margin-top: 100px; padding-left: 40px;}
+.sidePanelList a {font-size: 24px; font-weight: 500; line-height: 3em; color: #444; display: inline-block; text-decoration: none;}
+.sidePanelList li:hover a {font-weight: 900; color: #0162ff;}
+.sidePanel .telBox {margin-top: 0; padding: 40px; bottom: 0; right: 0px; left: auto; width: 400px; background-color: #0162ff;}
+.sidePanel .telBox p {color: #fff; font-size: 16px; margin-bottom: 30px; font-weight: 700;}
+.sidePanel .telBox a {color: #fff; text-decoration: none; line-height: 1.6em; cursor: pointer;}
+
+.subGnb {display: inline-block;}
+.subGnb .gnb {width: 840px; right: 0; text-align: right; z-index: 100; top: 0; position: fixed; border-bottom: 0.5px solid #dddddd;}
+.subGnb .gnb li {display: inline-block; list-style: none;}
+.subGnb .gnb li a {display: block; position: relative; text-decoration: none; padding: 0 20px; font-size: 18px; line-height: 80px; height: 80px; font-weight: 500; color: #505050;}
+.subGnb .gnb li.active a {color: #0162ff;}
+
+/* 서브페이지 */
+.sub.sidePanel {display: none;}
+header.sub .btnHamburger {display: none;}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .subGnb .gnb {display: none;}
+    .sub.sidePanel {display: flex;}
+    header.sub .btnHamburger {display: block;}
+    header.sub.scroll {height: 100px;}
+    
+}
+@media screen and (max-width: 767px) {
+    /* 메인페이지 */
+    .sidePanel {width: 100vw; }
+    .sidePanel .telBox {width: 100vw; }
+    header .headerWrap h1 a span {display: block; position: absolute; top: 30px; left: 0; width: 30px; height: 30px; text-indent: -9999px; background: url("/images/logo_bol.png") no-repeat center center; background-size: 100% auto;}
+    header.sub.scroll .headerWrap h1 a span {display: block; position: absolute; top: 30px; left: 0; width: 30px; height: 30px; text-indent: -9999px; background: url("/images/logo_bol.png") no-repeat center center; background-size: 100% auto;}
+    .btnHamburger {z-index: 710; display: block; width: 40px; height: 40px; border-radius: 30px;box-shadow: 0 5px 10px rgb(0, 0, 0,0.4);}
+    .btnHamburger .bar {display:block; width:80%;height:3px;margin:0 auto 6px;background:#fff;border-radius:2px;transition:transform 0.3s ease, opacity 0.3s ease;transform-origin:left center;}
+    .btnHamburger.active .bar:nth-child(1) {transform: rotate(50deg) translateX(2px) translateY(1px);}
+    .btnHamburger.active .bar:nth-child(2) {opacity: 0;}
+    .btnHamburger.active .bar:nth-child(3) {transform: rotate(-48deg) translateX(2px) translateY(-2px);}
+
+    /* 서브페이지 */
+    header.sub.scroll {height: 100px;}
+    header.sub .subGnb {display: none;}
+    header.sub .btnHamburger {display: block;}
+    .sub.sidePanel {display: flex;}
+}
+
+
+
+
+
+

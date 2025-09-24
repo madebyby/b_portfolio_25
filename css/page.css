@@ -1,0 +1,393 @@
+/* 메인페이지 */
+main,main .slick-list,main .slick-track{height:100vh;overflow:hidden}
+main section {width: 100vw; height: 100vh; position: relative; overflow: hidden; box-sizing: border-box;}
+.mainVisual .textBox {position: absolute; top: 50%; left: 12%; transform: translateY(-50%); text-align: left; display: inline-block;} 
+.mainVisual .textBox .title {margin-bottom: 20px; padding: 0; text-align: left;}
+.mainVisual .textBox .title p {color: #fff; font-size: 130px; letter-spacing: 1px; line-height: 1em; text-align: left;}
+.mainVisual .textBox .title p span {display: inline-block; vertical-align: middle; letter-spacing: -24px;}
+.mainVisual .textBox .desc p {font-size: 18px; color: #fff; line-height: 1.5em; width: 40%; padding: 0;}
+.btnAbout{display: block; width: 120px; cursor: pointer; margin-left: 50px; height: 120px; border-radius: 120px; background: url('../images/arrow.png') center no-repeat; background-color: rgba(255, 255, 255, 0.2);}
+
+.animate_top.top2 {transform: translateY(0);}
+.animate_top{transform:translateX(150px);opacity: 0;-webkit-transition:all 1s ease-in-out; transition:all 1s ease-in-out; -webkit-transition-property:transform, opacity; transition-property:transform, opacity;}
+.animate_top.top {transform: translateY(50px);}
+.animate_delay_2{-webkit-transition-delay:0.2s;transition-delay:0.2s}
+.animate_delay_4{-webkit-transition-delay:0.4s;transition-delay:0.4s}
+.animate_delay_6{-webkit-transition-delay:0.6s;transition-delay:0.6s}
+.animate_delay_8{-webkit-transition-delay:0.8s;transition-delay:0.8s}
+.animate_delay_10{-webkit-transition-delay:1s;transition-delay:1s}
+.animate_delay_12{-webkit-transition-delay:1.2s;transition-delay:1.2s}
+.animate_delay_14{-webkit-transition-delay:1.4s;transition-delay:1.4s}
+.on .animate_top{transform:translateX(0);opacity:1}
+.on .animate_top.top{transform:translateY(0);}
+.on .animate_top.bottom{transform:translateY(0);}
+.on .animate_top.top2{transform:translateY(0);}
+
+.scrollDown {position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); color: #fff;}
+.scrollDown b {display: block; width: 5px; height: 13px; border-radius: 100px; background-color: #eee; position: absolute; top: 10px; left: 50%; transform: translate(-50%, 0);  animation: downAndUp 1s ease-in-out infinite;} 
+.scrollDown small {display: block; margin: 0 auto 13px; width: 32px; height: 48px; box-sizing: border-box; border-radius: 100px; border: 1px solid #fff;}
+.scrollDown span {font-size: 12px;}
+@keyframes downAndUp{0%{margin-top:0; opacity: .2;} 30%{margin-top: 10px; opacity: 1;} 100%{margin-top: 0; opacity: .2;}}
+
+.swipeAnimate {display: none; position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); z-index: 30; color: #fff;}
+.swipeAnimate > div {position: relative;}
+.swipeAnimate .arrowLeft {display: inline-block; width: 14px; height: 9px;  background: url('/images/arrowLeft.png')  no-repeat; background-size: contain; position: absolute; top: 0; left: -20px; animation: arrow-left 1.5s infinite;}
+.swipeAnimate .arrowRight {display: inline-block; width: 14px; height: 9px; background: url('/images/arrowRight.png')  no-repeat; background-size: contain; position: absolute; top: 0; right: -20px; animation: arrow-right 1.5s infinite;}
+.swipeAnimate .finger {display: inline-block; width: 30px; height: 47px; background: url('/images/finger.png') center no-repeat; background-size: cover;  animation: finger-opacity 1.5s infinite;}
+@keyframes arrow-left  { 0%,100%{transform:translateX(0);opacity:.3} 50%{transform:translateX(-8px);opacity:1} }
+@keyframes arrow-right { 0%,100%{transform:translateX(0);opacity:.3} 50%{transform:translateX( 8px);opacity:1} }
+@keyframes finger-opacity{  0%,100%{opacity:.3} 50%{opacity:1} }
+
+.main_panel {width: 100%; height: 100%; position: relative; box-sizing: border-box;}
+.main_panel .textBox {position: absolute; top: 50%; left: 12%; transform: translateY(-50%);}
+.main_panel .textBox small {font-size: 20px; font-weight: 700; }
+.main_panel .textBox .title {margin: 20px 0 30px; font-size: 90px; letter-spacing: 0; line-height: 1em;}
+.main_panel .textBox .moreBtn {margin-block: 70px;}
+.moreBtn .btnMoreW {display: inline-block; height: 35px; position: relative; padding-right: 45px;}
+.moreBtn .btnMoreW span {color: #fff; font-size: 18px; line-height: 35px; letter-spacing: 0; display: inline-block;}
+.moreBtn .btnMoreW span::after {content: ''; background: url('/images/ic_arrow_w.png') center no-repeat; background-size: cover; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
+.moreBtn .btnMoreB {display: inline-block; height: 35px; position: relative; padding-right: 45px;}
+.moreBtn .btnMoreB span {color: #000; font-size: 18px; line-height: 35px; letter-spacing: 0; display: inline-block; font-weight: 500;}
+.moreBtn .btnMoreB span::after {content: ''; background: url('/images/ic_arrow_b.png') center no-repeat; width: 35px; height: 35px; position: absolute; top: 0; right: 0;}
+.desc {line-height: 1.5em;}
+.about_panel .textBox,.skills_panel .textBox {color: #fff;}
+.main_panel.about_panel {background: #000 url('../images/aboutBg.jpg') right center no-repeat; background-size: 60% 50%;}
+.main_panel.skills_panel{background: url('../images/skillsBg.png') center left no-repeat; background-size: 80% 100%;}
+.main_panel.update_panel {background: #fff;}
+.main_panel.update_panel p {color: #333; text-align: left;}
+
+.main_panel.skills_panel .skillsDetailBox {background: #fff; position: absolute; width: 30vw; top: 0; right: 0; height: 100%;}
+.main_panel.skills_panel .skillsDetailBox .detailBox {color: #000; position: absolute; width: 100%; top: 50%; right: 0; transform: translateY(-50%); text-align: center;}
+.main_panel.skills_panel .skillsDetailBox .detailBox .desc{color: #000;}
+.main_panel.skills_panel .skillsDetailBox .detailBox ul {text-align: left; padding: 0 60px;}
+.main_panel.skills_panel .skillsDetailBox .detailBox ul li {padding: 40px;}
+.main_panel.skills_panel .skillsDetailBox .detailBox ul li .tit {font-size: 30px; letter-spacing: 0; margin: 5px auto 10px; color: #333; line-height: 1.3em;}
+.main_panel.skills_panel .skillsDetailBox .detailBox ul li .icon img {width: 30px; height: 30px;}
+
+.main_panel.update_panel .noticeBox {width: 56%; position: absolute; top: 50%; right: 8%; transform: translateY(-50%);}
+.main_panel.update_panel .noticeBox .cellBox {display: table; table-layout: fixed; border-spacing: 20px; width: 100%;}
+.main_panel.update_panel .noticeBox .cell:first-child {margin-left: 0;}
+.main_panel.update_panel .noticeBox .cell {display: table-cell; vertical-align: top; max-width: 450px; margin: 0 10px;}
+.main_panel.update_panel .noticeBox .cell:last-child {margin-right: 0;}
+.main_panel.update_panel .noticeBox .cell a {display: block; position: relative; overflow: hidden; padding: 0; font-size: 0; width: 100%; height: 0; padding-top: 99%; border: 1px solid #ddd;}
+.main_panel.update_panel .noticeBox .cell .thumbBox {position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+.main_panel.update_panel .noticeBox .cell .thumbBox img {width: 100%; min-height: 100%; transition: transform 0.3s ease;}
+.main_panel.update_panel .noticeBox .cell:hover .thumbBox img {transform: scale(1.2);}
+.main_panel.update_panel .noticeBox .cell .coverBox {background: url('/images/cellCover.png') center no-repeat; background-size: 100% 100%; position: absolute; left: 0; width: 100%; top: -1px; height: calc(100% + 1px);}
+.main_panel.update_panel .noticeBox .cell .coverBox .subject {color: #fff; font-size: 14px; line-height: 1.4; position: absolute; top: 5%; left: 5%;}
+.main_panel.update_panel .noticeBox .cell .coverBox .subject span {color: #fff; font-size: 18px; line-height: 1.4;}
+.main_panel.update_panel .noticeBox .cell .coverBox .more {color: #fff; font-size: 14px; position: absolute; right: 5%; bottom: 5%;}
+.main_panel.update_panel .btnPrev {display: none; background:  url('/images/btn_before_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; left: 2%; z-index: 10;}
+.main_panel.update_panel .btnNext {display: none; background:  url('/images/btn_next_controls.png') center no-repeat; background-size: 70% auto; position: absolute; top: 50%; right: 2%; z-index: 10;}
+.main_panel.update_panel .btnPrev,
+.main_panel.update_panel .btnNext {cursor: pointer; width: 50px; height: 50px; border-radius: 50px;}
+
+
+.main_panel.contact_panel {height: 100vh; background: url('/images/contactbg.jpg') center no-repeat; background-size: cover; color: #fff;}
+.main_panel.contact_panel .textBox {left: 0; width: 100%; text-align: center;}
+.main_panel.contact_panel a {text-decoration: none; color: #fff;}
+.main_panel.contact_panel .textBox .btnBox {text-align: center; margin-top: 30px;}
+
+
+/* 서브페이지 */
+/* 서브페이지공통비주얼 */
+.subVisual {background: transparent; position: relative; z-index: 99; padding-block: 180px 130px;}
+.subVisual .bg {display: block; width: 533px; height: 351px; position: absolute; top: 0; left: 0; background: url('/images/subBg.png');}
+.subVisual h2 {color: #111; font-size: 56px; font-weight: 800; letter-spacing: -3px; text-align: center;}
+.subVisual ul {text-align: center; margin-top: 40px; display: flex; justify-content: center; gap: 40px;}
+.subVisual ul li a {font-size: 20px; text-decoration: none; color: #505050;}
+.subVisual ul li.active a {color: #0162ff; font-weight: 700;}
+.wrapping .subContent {padding-block: 100px;}
+
+/* 서브페이지공통 */
+.subContent {padding-inline: 40px; margin: 0 auto; max-width: 1400px;}
+.subContent .entitle span {font-size: 18px; color: #0162ff; letter-spacing: 0; line-height: 1.3em;}
+.cellBox {display: flex; justify-content: space-between; align-items: center;}
+.entitle + .cellBox {margin-top: 15px;}
+.cellBox .title {color: #333; font-size: 40px; letter-spacing: -2px; font-weight: 500; align-self: start; line-height: 1.4;}
+.cellBox .textBox {width: 50%; align-self: start;}
+.cellBox .text {color: #666; font-size: 16px; line-height: 1.5; margin-bottom: 50px;}
+.cellBox .text b {font-weight: 700;}
+
+.subContent.about_panel video {width: 100%;}
+.subContent.contact_panel video {width: 100%;}
+
+.subContent.skills_panel {margin: 0 auto; height: auto; position: relative; display: flex;}
+.subContent.skills_panel .cellBox {display: block;}
+.subContent.skills_panel .cellBox .title {margin-bottom: 30px;}
+.subContent.skills_panel .cellBox .textBox {width: 80%;}
+.statBox {display: flex; justify-content: space-between;}
+.statBox ul {width: 80%; display: grid;grid-template-columns: repeat(2,1fr); list-style: none;}
+.statBox ul > li h3{display: inline-block; overflow: hidden; background-color: #e3eeff; color: #0162ff; font-size: 20px; font-weight: 500; margin: 0; padding: 5px;}
+.statBox ul > li > ol {margin-top: 10px;}
+.statBox ul > li > ol li {line-height: 24px;}
+.statBox ul > li > ol li span {color: #555; font-size: 10px; padding-left: 10px} 
+.statBox ul > li > ol li b {font-weight: 500; margin-right: 10px;}
+.statBox ul > li:last-child > ol > li{display: flex; align-items: center; justify-content: space-between;}
+.statBox ul > li > ol li img {width: 20px;}
+.statBox ul > li > ol li label {margin-left: 10px; flex: 1; text-transform: uppercase;}
+.statBox ul > li > ol li progress {height: 10px; border-radius: 10px; appearance: none; background: #ddd;overflow: hidden; position: relative;}
+.statBox ul > li > ol li progress::-webkit-progress-bar {background: #ddd; border-radius: 10px;}
+.statBox ul > li > ol li progress::-webkit-progress-value {background: linear-gradient(to right, #aabdf5, #7894e5); border-radius: 10px;}
+.subContent.skills_panel img.profile {width: 30%; border-radius: 30px; box-sizing: border-box;}
+
+.subContent.work_panel .career-list {list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; align-items: flex-start; position: relative;}
+.subContent.work_panel .career-list::before {content: ""; position: absolute; top: 20px; left: 0; right: 0; height: 3px; background: #007bff;}
+.subContent.work_panel .career-list li {position: relative; text-align: center; flex: 1;}
+.subContent.work_panel .career-list li::before {content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 14px; height: 14px; background: #007bff; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #007bff;}
+.subContent.work_panel .career-list p {margin: 40px 0 5px; font-weight: bold; font-size: 13px; color: #007bff;}
+.subContent.work_panel .career-list b {display: block; font-size: 16px; margin-bottom: 3px; color: #222;}
+.subContent.work_panel .career-list span {display: block; font-size: 14px; color: #666;}
+
+
+.subContent.work_panel .skillsBox {margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.subContent.work_panel .skillsBox > div {width: calc(50% - 10px); height: 274px; display: inline-block; vertical-align: middle; padding: 30px; margin-top: 20px; box-sizing: border-box;}
+.subContent.work_panel .skillsBox > div .tit {font-size: 36px; line-height: 1.3em; padding-bottom: 10px; letter-spacing: 0; color: #333; position: relative;}
+.subContent.work_panel .skillsBox > div .tit::after {content: ''; width: 21px; height: 2px; background-color: #000; position: absolute; left: 0; bottom: 0;}
+.subContent.work_panel .skillsBox > div .tit .titPoint {position: relative; color: #0162ff; font-weight: 700; font-size: 16px; margin-left: 5px;}
+.subContent.work_panel .skillsBox > div .txt {font-size: 16px; line-height: 1.3em; color: #666; padding-top: 10px;}
+.subContent.work_panel .skillsBox > div:nth-child(1) {background: #f5f5f5 url('/images/skillsBox01.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(2) {background: #f5f5f5 url('/images/skillsBox02.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(3) {background: #f5f5f5 url('/images/skillsBox03.jpg') right bottom no-repeat; background-size: cover;} 
+.subContent.work_panel .skillsBox > div:nth-child(4) {background: #f5f5f5 url('/images/skillsBox04.jpg') right bottom no-repeat; background-size: cover;} 
+
+.project_panel .pj_pu_01_box {background-color: #6e6e6e; color: #fff;}
+.project_panel .pj_pu_02_box {background-color: #c03b00; color: #fff;}
+.project_panel .pj_de_01_box {background-color: #d20075; color: #fff;}
+.project_panel .pj_de_02_box {background-color: #023056; color: #fff;}
+.project_panel .pj_de_03_box {background-color: #c67000; color: #fff;}
+.project_panel .pj_de_04_box {background-color: #005f94; color: #fff;}
+.project_panel .pj_de_05_box {background-color: #3c476e; color: #fff;}
+.project_panel .pj_de_06_box {background-color: #4d4d4d; color: #fff;}
+.project_panel .pj_de_07_box {background-color: #7c2326; color: #fff;}
+.project_panel .pj_sns_01_box {background-color: #e9f2ff; color: #005ca7;}
+
+.project_panel > div .boxWrap {position: relative; min-height: 780px; overflow: hidden; border-bottom: #eee solid 5px;}
+.project_panel > div .boxWrap .left {position: absolute; top: 5%; left: 5%; width: 90%;}
+.project_panel > div .boxWrap .left .num {font-size: 20px; font-weight: 700; margin-bottom: 30px;}
+.project_panel > div .boxWrap .left .tit {display: block; font-size: 40px; letter-spacing: 0; position: relative; margin-bottom: 10px;}
+.project_panel > div .boxWrap .left .tit::after {content: ''; width: 21px; height: 2px; background-color: #ffffff; position: absolute; left: 0; bottom: -60px;}
+.project_panel > div .boxWrap .left .desc_box {margin-bottom: 24px;}
+.project_panel > div .boxWrap .left .desc_box .desc {font-size: 14px;}
+.project_panel > div .boxWrap .left .desc_box .desc span {font-weight: 700;}
+.project_panel > div .boxWrap .left .desc_box .meta {font-size: 14px; display: flex; align-items: center; gap: 18px; font-size: 14px; font-weight: 600;}
+.project_panel > div .boxWrap .left .desc_box .meta .bar{position: relative; width: 70px; height: 12px; background-color: #ffffff; overflow: hidden;}
+.project_panel > div .boxWrap .left .text_box {font-size: 12px; width: 30%;}
+.project_panel > div .boxWrap .left .text_box p {line-height: 1.6; font-weight: 300; margin-bottom: 10px;} 
+.project_panel > div .boxWrap .left .text_box b {font-weight: 700;}
+.project_panel > div .boxWrap .rightMock {text-align: right; position: absolute; right: 5%; bottom: 5%; z-index: 10;}
+.project_panel > div .boxWrap .rightMock img.mockPc {width: 60%;}
+.project_panel > div .boxWrap .rightMock img.mockMo {width: 15%; position: absolute; right:15px; bottom: -10px;}
+.project_panel > div .boxWrap .btnDemo {position: absolute; left: 5%; bottom: 7%; cursor: pointer; z-index: 100;}
+.project_panel > div .boxWrap .btnDemo .go-btn{display:inline-flex; align-items:center; gap:8px; font-size:18px; color:#ffffff; text-decoration:none}
+.project_panel > div .boxWrap .btnDemo .go-btn .txt {font-size: 14px; font-weight: 500;}
+.project_panel > div .boxWrap .btnDemo .go-btn .arrows{display:inline-flex; gap:6px}
+.project_panel > div .boxWrap .btnDemo .go-btn .arrows i{width:12px; height:12px; background:#fff; clip-path:polygon(0 0,100% 50%,0 100%); opacity:.3; animation:fade 1.2s infinite}
+.project_panel > div .boxWrap .btnDemo .go-btn .arrows i:nth-child(1){animation-delay:0s; opacity:1}
+.project_panel > div .boxWrap .btnDemo .go-btn .arrows i:nth-child(2){animation-delay:.2s}
+.project_panel > div .boxWrap .btnDemo .go-btn .arrows i:nth-child(3){animation-delay:.4s}
+@keyframes fade{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+
+.project_panel > div .box.top {display: flex; align-items: center; justify-content: space-between; padding: 4%; font-weight: 500;}
+.project_panel .cards-horizontal{position:relative; padding-block: 50px; overflow: hidden;}
+.project_panel .cards-horizontal .phone-mockup{position:absolute;left:50%; top:50%; transform:translate(-50%,-50%); z-index:40; pointer-events:none;}
+.project_panel .cards-horizontal .phone-mockup img{width: 300px;}
+.project_panel .cards-horizontal .cardSlider{position:relative; z-index:1; width: 1400px;}
+.project_panel .cards-horizontal .cardSlider.cardFlow {margin-bottom: 50px;}
+.project_panel .cards-horizontal .cardSlider .slick-slide{margin:0 16px;}
+.project_panel .cards-horizontal .cardSlider .slick-slide img{display:block; width: 300px;}
+.project_panel .cards-horizontal .cardBack{transform:scaleX(-1);}
+.project_panel .cards-horizontal .cardBack img{transform:scaleX(-1);}
+
+.project_panel .gridC2{position:absolute;top: 30%;right: 0%; padding-inline: 5%; display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:90%;}
+.project_panel .rota01,.rota02{width:100%;}
+.project_panel .gridC2 img{width:100%; height: 600px;object-fit:cover;}
+.project_panel .rota01 img{object-position:top;}
+.project_panel .rota02 img{object-position:bottom;}
+
+.project_panel .gridC2121{display:grid; justify-content: right; grid-template-columns:repeat(6,1fr); height: 1220px; gap:10px; padding: 0 4% 4%;}
+.project_panel .gridC2121 .card{ overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.project_panel .gridC2121 .span2{grid-column:span 2;}
+.project_panel .gridC2121 .span1{grid-column:span 1;}
+.project_panel .gridC2121 img.thumb{display:block; width:100%;}
+
+.project_panel .gridC213 {display:grid; grid-template-columns:repeat(6,1fr); gap:10px; padding:0 4% 4%; align-items: start;}
+.project_panel .gridC213 .card{overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.project_panel .gridC213 .span3{grid-column:span 3;}
+.project_panel .gridC213 .span3 > article{max-height: 400px;}
+.project_panel .gridC213 .span2{grid-column:span 2; max-height: 1220px;}
+.project_panel .gridC213 .span1{grid-column:span 1; max-height: 1220px;}
+.project_panel .gridC213 img.thumb{display:block; width:100%;}
+
+.project_panel .gridC11{position:absolute;top: 0; right: 4%; display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:60%;}
+.project_panel .gridC11 img{width:100%; height: 780px;object-fit:cover; filter: brightness(30%);}
+
+.project_panel .mobile {display: none;}
+.project_panel .mobile .pageBox {width: 90%; padding: 4%;}
+.project_panel .mobile .pageBox img {width: 100%;}
+
+.subContent.projectintro_panel {padding-block: 0;}
+.projectintro_panel {display: flex; align-items: center; justify-content: space-around; gap: 5%;}
+.projectintro_panel > div {width: 45%;}
+.projectintro_panel img {width: 30%;}
+.projectintro_panel .cellBox {flex-direction: column;}
+.projectintro_panel .cellBox .title {margin-bottom: 50px;}
+
+.contact_panel form {display: flex; margin: 0 auto; flex-direction: column; width: 100%; justify-content: space-between; gap: 20px; margin-bottom: 20px;}
+.contact_panel form :is(input, textarea) { border: 1px solid #999; font-size: 14px; padding: 0.8em 0.5em;}
+.contact_panel form input::placeholder,textarea::placeholder{font-family: 'Roboto';}
+.contact_panel form input[type="submit"] {padding: 10px; background-color: #007bff; color: #fff; cursor: pointer; border: 0 none; width: 160px; align-self: flex-end;}
+
+.contact_panel .contactVideo {height: 300px; overflow: hidden;}
+.contact_panel .contactVideo video {transform: translateY(-150px);}
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    /* 메인페이지 */
+    
+    .mainVisual .textBox .title p {font-size: 100px;}
+    .mainVisual .textBox .desc p {width: 70%;}
+    .btnAbout{display: block; width: 90px; cursor: pointer; margin-left: 50px; height: 90px; border-radius: 120px; background: url('../images/arrow.png') center no-repeat; background-color: rgba(255, 255, 255, 0.2);}
+    .scrollDown {display: none;}
+    .swipeAnimate {display: inline-block; position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); z-index: 30; color: #fff;}
+    .main_panel .textBox {position: absolute; top: 50%; left: 12%; transform: translateY(-50%);}
+    .main_panel.about_panel {background: #000 url('../images/aboutBg.jpg') bottom center no-repeat;background-size: auto 50vh;}
+    .main_panel.about_panel .textBox,
+    .main_panel.skills_panel .textBox,
+    .main_panel.update_panel .textBox{top: 30%;}
+    .main_panel.skills_panel{background: url('../images/skillsBg.png') top center no-repeat; background-size: 100vw 50vh;}
+    .main_panel.skills_panel .skillsDetailBox{background: #ffffff; position: absolute; width: 100%; top: 50%; right: 0; height: 50%;}
+    .main_panel.skills_panel .skillsDetailBox ul li {background-color: #f8f8f8; margin-bottom: 10px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li .icon img {width: 15px; height: 15px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul {text-align: left; padding: 0 30px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li {padding: 10px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li .tit {font-size: 22px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox .desc{color: #000; font-size: 14px;}
+    
+    .statBox ul {width: 40%; display: grid;grid-template-columns: repeat(1,1fr); list-style: none;}
+    .statBox ul > li:last-child > ol > li{display: flex; align-items: center; justify-content: center;}
+    .subContent.skills_panel {margin: 0 auto; height: auto; position: relative; display: flex; align-items: end;}
+
+    .skills_panel .skillsDetailBox{background: #ffffff; position: absolute; width: 100%; top: 50%; right: 0; height: 50%;}
+    .skills_panel .skillsDetailBox ul li {background-color: #f8f8f8; margin-bottom: 10px;}
+    .skills_panel .skillsDetailBox .detailBox ul li .icon img {width: 15px; height: 15px;}
+    .main_panel.update_panel .noticeBox {width: 100%; position: absolute; top: 68%; right: auto;}
+    .main_panel.update_panel .textBox{position: relative; top: auto; left: auto; transform: none; padding: 200px 25px;}
+    
+    .project_panel > div .boxWrap .box.rightPc img {width: 60%; min-width: 550px;}
+    .project_panel .gridC2121{display:grid; justify-content: right; grid-template-columns:repeat(6,1fr); height: 600px; gap:10px; padding: 0 4% 4%;}
+
+    .project_panel .gridC2{position:absolute;top: 30%;right: 0%; padding-inline: 5%; display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:90%;}
+    .project_panel .rota01,.rota02{width:100%;--shift:0;}
+    .project_panel .gridC2 img{width:100%; height: 600px;object-fit:cover;transform:none;border-radius:4px;}
+    .project_panel .rota01 img{object-position:top;}
+    .project_panel .rota02 img{object-position:bottom;}
+
+    .project_panel .gridC11{position:absolute;top: 0; right: 5%; display:block; width: 56%; align-items: start;}
+    .project_panel .gridC11 img{width:100%; height: 780px;object-fit:cover; filter: brightness(30%);}
+    .project_panel .gridC11 .rota02 {display: none;}
+
+
+}
+
+@media screen and (max-width:767px){
+    /* 메인페이지 */
+    .mainVisual .textBox {left: 40px; width: calc(100% - 80px);}
+    .mainVisual .textBox .title p {font-size: 64px; letter-spacing: 8px;}
+    .mainVisual .textBox .desc p {width: 100%; font-size: 12px;}
+    .mainVisual .textBox .title p span.btnAbout {display: none; width: 90px; cursor: pointer; margin-left: 50px; height: 90px; border-radius: 120px; background: url('../images/arrow.png') center no-repeat; background-color: rgba(255, 255, 255, 0.2);}
+    .scrollDown {display: none;}
+    .swipeAnimate {display: inline-block; position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); z-index: 30; color: #fff;}
+    .main_panel .textBox {position: absolute; top: 50%; left: 5%; transform: translateY(-50%);}
+    .main_panel .textBox small {font-size: 16px; font-weight: 700; }
+    .main_panel .textBox .title {margin: 20px 0 30px; font-size: 45px; letter-spacing: 0; line-height: 1em;}
+    .main_panel .textBox .desc {font-size: 12px;}
+    .main_panel .textBox .btnBox {margin-top: 70px;}
+    .main_panel.about_panel {background: #000 url('../images/aboutBg.jpg') bottom center no-repeat;background-size: auto 40vh;}
+    .main_panel.about_panel .textBox,
+    .main_panel.skills_panel .textBox,
+    .main_panel.update_panel .textBox{top: 38%;}
+    .main_panel.skills_panel{background: url('../images/skillsBg.png') top center no-repeat; background-size: 100vw 60vh;}
+    .main_panel.skills_panel .skillsDetailBox{background: #ffffff; position: absolute; width: 100%; top: 60%; right: 0; height: 40%;}
+    .main_panel.skills_panel .skillsDetailBox ul li {background-color: #f8f8f8; margin-bottom: 10px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li .icon img {width: 12px; height: 12px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul {text-align: left; padding: 0 10px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li {padding: 10px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox ul li .tit {font-size: 16px;}
+    .main_panel.skills_panel .skillsDetailBox .detailBox .desc{color: #000; font-size: 10px;}
+    
+    .main_panel.update_panel {padding: 150px 40px;}
+    .main_panel.update_panel .updateBox {width: auto; position: relative; top: auto; left: auto; transform: none;}
+    .main_panel.update_panel .updateBox .noticeBox {max-width: 450px; width: 100%; position: relative; top: 100%; right: auto; transform: none;}
+    .main_panel.update_panel .updateBox .textBox{position: relative; top: auto; left: auto; transform: none; padding: 0;}
+    .main_panel.update_panel .noticeBox .cellBox {border-spacing: 0;}
+    .main_panel.update_panel .noticeBox .cell {display: none; max-width: unset; margin: 0;}
+    .main_panel.update_panel .noticeBox.nt1 .cell:nth-child(1),
+    .main_panel.update_panel .noticeBox.nt2 .cell:nth-child(2),
+    .main_panel.update_panel .noticeBox.nt3 .cell:nth-child(3) {display: block;}
+    .main_panel.update_panel .btnPrev {display: block;}
+    .main_panel.update_panel .btnNext {display: block;}
+
+
+    /* 서브페이지 */
+    .subVisual {background: transparent; position: relative; z-index: 99; padding-block: 180px 50px;}
+    .subVisual h2 {color: #111; font-size: 38px; font-weight: 800; letter-spacing: -3px; text-align: center;}
+    .subVisual ul {text-align: center; margin-top: 40px; display: flex; justify-content: center; gap: 15px;}
+    .subVisual ul li a {font-size: 16px; text-decoration: none; color: #505050;}
+    .subContent {padding-inline: 20px; margin: 0 auto; max-width: 1400px;}
+    .wrapping .subContent {padding-block: 50px 100px;}
+    .cellBox {display: flex; justify-content: space-between; align-items: center; margin-bottom: 55px; flex-direction: column;}
+    .cellBox .title {color: #333; font-size: 40px; letter-spacing: -2px; font-weight: 500; align-self: start; margin-bottom: 70px;}
+    .cellBox .textBox {width: 100%; align-self: start;}
+    .subVisual .bg {display: block; width: 300px; height: 197px; position: absolute; top: 0; left: 0; background: url('/images/subBg.png') center no-repeat; background-size: cover;}
+
+    .subContent.skills_panel {margin: 0 auto; height: auto; position: relative; display: flex; flex-direction: column;}
+    .subContent.skills_panel .cellBox .textBox {width: 100%;}
+    .statBox ul {width: 100%; display: grid;grid-template-columns: repeat(1,1fr); list-style: none;}
+    .subContent.skills_panel img.profile {width: 100%; align-self: self-end; border-radius: 30px; box-sizing: border-box; margin-top: 30px;}
+
+    .subContent.work_panel .skillsBox {flex-direction: column;}
+    .subContent.work_panel .skillsBox .box {width: 100%;}
+
+    .subContent.work_panel .career-list p {margin: 40px 0 5px; font-weight: 500; font-size: 8px; color: #007bff;}
+    .subContent.work_panel .career-list b {display: block; font-size: 14px; font-weight: 700; margin-bottom: 3px; color: #222;}
+    .subContent.work_panel .career-list span {display: block; font-size: 10px; color: #666;}
+    .project_panel > div .boxWrap .left .text_box {font-size: 12px; width: 80%;}
+    .project_panel > div .boxWrap {position: relative; min-height: 600px; overflow: hidden; border-bottom: #eee solid 5px;}
+    .project_panel > div .boxWrap .rightMock {text-align: right; position: absolute; right: 5%; bottom: 15%;}
+    .project_panel > div .boxWrap .rightMock img.mockPc {width: 50%;}
+    .project_panel > div .boxWrap .rightMock img.mockMo {width: 15%; position: absolute; right:15px; bottom: -10px;}
+
+    .project_panel .gridC2121{display:grid; justify-content: right; grid-template-columns:repeat(6,1fr); height: 600px; gap:10px; padding: 0 4% 4%;}
+    .project_panel .gridC2121 .span2{grid-column:span 2;max-height: 550px;}
+    .project_panel .gridC2121 .span1{grid-column:span 1;max-height: 550px;}
+
+    .project_panel .gridC213 .span3 > article{max-height: 180px;}
+    .project_panel .gridC213 .span2{grid-column:span 2; max-height: 550px;}
+    .project_panel .gridC213 .span1{grid-column:span 1; max-height: 550px;}
+
+    .project_panel .gridC2{position:absolute;bottom: 0;right: 0%; padding-inline: 5%; display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:90%; align-items: end;}
+    .project_panel .rota01,.rota02{width:100%;}
+    .project_panel .gridC2 img{width:100%; height: 310px;object-fit:cover;transform:none;}
+    .project_panel .rota01 img{object-position:top;}
+    .project_panel .rota02 img{object-position:bottom;}
+
+
+    .project_panel .gridC11{position:absolute;top: 0; right: 5%; display:block; width: 70%; align-items: start;}
+    .project_panel .gridC11 img{width:100%; height: 780px;object-fit:cover; filter: brightness(30%);}
+    .project_panel .gridC11 .rota01 {display: none;}
+    .project_panel .gridC11 .rota02 {display: none;}
+
+    .project_panel .mobile {display: block;}
+    .projectintro_panel {display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 5%;}
+    .projectintro_panel > div {width: 100%;}
+    .projectintro_panel img {width: 100%;}
+
+    .contact_panel .contactVideo {height: 300px; overflow: hidden;}
+    .contact_panel .contactVideo video {transform: translateY(0);}
+}
+
+
+
+
+
+
+
